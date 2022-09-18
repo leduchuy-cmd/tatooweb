@@ -1,0 +1,316 @@
+* {
+  /* ghi đè lên các trình duyệt mặc định ban đầu với margin và padding */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* font size thiết lập cho webside ở các thẻ  */
+  font-size: 16px;
+  /* 1 rem = 16px theo mặc định font size khi khi báo */
+}
+
+html,
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+button {
+  background-color: #686f7a;
+  border: 1px solid white;
+  color: white;
+  padding: 13px 32px;
+  font-size: 0.875rem;
+  border-radius: 5px;
+  /* khi rê chuột vào thì xuất hiện bàn tay để click vào */
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.7s;
+}
+button:hover {
+  background-color: rgb(117, 112, 112);
+  color: black;
+  border: black;
+}
+.clean {
+  clear: both;
+}
+/* HEADER  */
+header {
+  background-color: #333;
+}
+.navbarInstruction img {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}
+.navbarInstruction a {
+  color: #fff;
+  font-weight: bold;
+}
+.navbarInstruction p {
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+#navbarInstruction .navbar-nav {
+  justify-content: space-between;
+  margin-left: 100px !important;
+}
+#navbarInstruction ul {
+  margin-left: 50px;
+}
+#navbarInstruction .nav-item {
+  margin: 0 10px;
+}
+/* thiết lập các thông số đường line  */
+.navbarInstruction .nav-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #ff4f81;
+  display: block;
+  transition: all 0.6s;
+}
+#navbarInstruction .nav-item:hover .nav-link {
+  color: #ff4f81;
+}
+/* luôn luôn xuất hiện khi vào trang chủ, màu chữ  */
+.navbarInstruction .nav-item.active .nav-link {
+  color: #ff4f81;
+}
+/* thiết lập các thông số cho phần nav  */
+.navbarInstruction .nav-link {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+/* re chuột vào đường lỉn bắt đầu chạy  */
+.navbarInstruction .nav-item:hover::after {
+  width: 100%;
+}
+/* luôn luôn xuất hiện đường line trang chủ  */
+.navbarInstruction .nav-item.active::after {
+  width: 100%;
+}
+.navbarInstruction .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* border: 2px solid rgba(0, 0, 0, 0.609); */
+}
+.navbarInstruction .dropdown-menu .dropdown-item {
+  color: white;
+  transition: all 0.5s;
+}
+#navbarInstruction .dropdown-item:focus,
+#navbarInstruction .dropdown-item:hover {
+  background-color: transparent;
+  color: #ff4f81;
+}
+/* ---------------------------- */
+/* --------CAROCUS --------- */
+/* ---------------------------- */
+
+#carouselTatoo .carousel-caption {
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#carouselTatoo .carousel-caption h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+#carouselTatoo .carousel-caption p {
+  letter-spacing: 2px;
+  line-height: 1.8em;
+
+  width: 64%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+#carouselTatoo .carousel-caption button {
+  padding: 11px 22px;
+  font-size: 18px;
+  color: black;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+#carouselTatoo .carousel-caption button:hover {
+  background-color: #ff4f81;
+  /* border: 1px solid white; */
+  color: white;
+}
+
+/* WELLCOME  */
+.wellcome .heading {
+  text-align: center;
+  padding-top: 40px;
+}
+.wellcome .heading h2 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #ff4f81;
+}
+.wellcome .heading p {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+.intro__item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.wellcome__content {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+}
+.intro__m1 {
+  grid-column: 2 / span 2;
+}
+.intro__m2 {
+  grid-column: 1 / span 2;
+}
+
+.intro__item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: auto;
+}
+
+.intro__text1 {
+  background-color: rgb(237, 100, 152);
+  margin: 0;
+}
+.intro__text2 {
+  background-color: rgb(131, 110, 170);
+}
+.intro__text1,
+.intro__text2 {
+  padding: 0 20px;
+}
+/* NUMBER  */
+.number__content {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-around;
+  text-align: center;
+}
+.number__content .number__item p:first-of-type {
+  color: rgb(78, 42, 132);
+  font-size: 2rem;
+  font-weight: 600;
+  padding-top: 50px;
+}
+.number__content .number__item p:last-of-type {
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+/* TRAIN  */
+.train h3 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #ff4f81;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.train {
+  padding-top: 50px;
+}
+.train .train__img img {
+  height: 90%;
+  width: 100%;
+  border-radius: 10px;
+}
+/* PRODUCT */
+.product > h3 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #ff4f81;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.product .product__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 15px;
+}
+.product__content .gallary__item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.product__content .gallary__g1 {
+  grid-column: 1 / 3;
+}
+.product__content .gallary__g6 {
+  grid-column: 3 / 5;
+}
+.product .gallary__item {
+  position: relative;
+}
+.product .gallary__item .gallary__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 28px 38px;
+  text-align: right;
+}
+.gallary__overlay h3 {
+  font-size: 1.875rem;
+  transform: translateY(20px);
+  transition: all 0.5s;
+}
+.gallary__item:hover .gallary__overlay h3 {
+  transform: translateY(0);
+}
+.gallary__overlay h3::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  display: block;
+  background-color: white;
+  margin-top: 10px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.gallary__item:hover .gallary__overlay h3::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* SERVICE */
+.service {
+  background-color: #101010;
+}
+.service h2 {
+  text-align: center;
+  color: #ff4f81;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding-top: 50px;
+}
+.service__item img {
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 10px;
+}
+.service__item p {
+  color: white;
+}
+iframe {
+  width: 100%;
+}
